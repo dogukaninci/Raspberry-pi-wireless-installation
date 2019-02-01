@@ -21,3 +21,6 @@ network={
 
 # Find IP address (easy way)
 ping raspberrypi.local
+# Find IP address (hard? way) if the method above fails
+# Mac address starting with B8:27:EB is most likely your raspberry pi
+arp -a
