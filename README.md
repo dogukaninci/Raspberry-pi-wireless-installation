@@ -27,6 +27,8 @@ arp -a
 # How to ip address find
 https://www.raspberrypi.org/documentation/remote-access/ip-address.md
 
+# if you use android (wifi sharing via hotspot) use hotspot manager apps to find client ip.
+
 # Install sshfs on OSX machine
 brew cask install osxfuse
 brew install sshfs
