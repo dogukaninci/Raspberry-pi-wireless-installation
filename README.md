@@ -15,7 +15,14 @@ update_config=1<br/>
 network={<br/>
      ssid="SSID_NAME"<br/>
      psk="PASSWORD"<br/>
-     key_mgmt=WPA-PSK<br/>   
+     key_mgmt=WPA-PSK<br/> 
+     priority = 1<br/>
+}<br/>
+network={<br/>
+     ssid="SSID_NAME"<br/>
+     psk="PASSWORD"<br/>
+     key_mgmt=WPA-PSK<br/> 
+     priority = 2<br/>
 }
 # Find IP address (easy way)
 ping raspberrypi.local
