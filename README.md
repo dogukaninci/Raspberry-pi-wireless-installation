@@ -9,11 +9,5 @@ https://www.raspberrypi.org/downloads/raspbian/
 
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
-
-network={
-    ssid="SSID_NAME"
-    psk="PASSWORD"
-    key_mgmt=WPA-PSK
-}
 # Find IP address (easy way)
 ping raspberrypi.local
