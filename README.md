@@ -8,6 +8,8 @@ https://www.raspberrypi.org/downloads/raspbian/
 # File name: wpa_supplicant.conf Contents are below ...
 
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+
 update_config=1
+
 # Find IP address (easy way)
 ping raspberrypi.local
