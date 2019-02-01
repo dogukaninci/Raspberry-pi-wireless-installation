@@ -24,6 +24,9 @@ ping raspberrypi.local
 # Mac address starting with B8:27:EB is most likely your raspberry pi
 arp -a
 
+# How to ip address find
+https://www.raspberrypi.org/documentation/remote-access/ip-address.md
+
 # Install sshfs on OSX machine
 brew cask install osxfuse
 brew install sshfs
