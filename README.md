@@ -9,19 +9,21 @@ https://www.raspberrypi.org/downloads/raspbian/
 # Create wifi connection detail file under boot folder
 # File name: wpa_supplicant.conf Contents are below ...
 
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev<br/>
-update_config=1<br/>
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
 
-network={<br/>
-     ssid="SSID_NAME"<br/>
-     psk="PASSWORD"<br/>
-     key_mgmt=WPA-PSK<br/> 
-     priority = 1<br/>
-}<br/>
-network={<br/>
-     ssid="SSID_NAME"<br/>
-     psk="PASSWORD"<br/>
-     key_mgmt=WPA-PSK<br/> 
+network={
+    ssid="Example"
+    psk="password"
+    id_str="home"
+    priority=2
+}
+
+network={
+    ssid="Example2"
+    psk="password2"
+    id_str="spruce"
+    priority=1
 }
 # Find IP address (easy way)
 ping raspberrypi.local
