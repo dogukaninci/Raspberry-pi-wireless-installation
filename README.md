@@ -57,3 +57,22 @@ sshfs pi@192.168.1.208: pi
 # Change 'raspberrypi' hostname to something unique
 https://thepihut.com/blogs/raspberry-pi-tutorials/19668676-renaming-your-raspberry-pi-the-hostname
 
+# VNC setup
+
+sudo apt-get install realvnc-vnc-server realvnc-vnc-viewer
+
+On your Raspberry Pi, boot into the graphical desktop.
+
+Select Menu > Preferences > Raspberry Pi Configuration > Interfaces.
+
+Ensure VNC is Enabled.
+Enabling VNC Server at the command line
+You can enable VNC Server at the command line using raspi-config:
+
+sudo raspi-config
+Now, enable VNC Server by doing the following:
+
+Navigate to Interfacing Options.
+
+Scroll down and select VNC > Yes.
+
