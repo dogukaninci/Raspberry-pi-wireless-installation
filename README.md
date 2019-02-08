@@ -76,3 +76,45 @@ Navigate to Interfacing Options.
 
 Scroll down and select VNC > Yes.
 
+# samba installation
+
+sudo apt-get install samba samba-common-bin
+
+Now, we need to configure Samba to share the Raspberry Pi directories with another computer within the network. Enter the following command:
+
+sudo nano /etc/samba/smb.conf
+
+The Samba configuration file is well documented. You can scroll down the file to see what you would like to enable. You can also remove everything by pressing and holding Ctrl and the Letter K or just copy and paste the following code at the bottom of the file:
+
+[global]
+netbios name = Pi
+server string = The Pi File Center
+workgroup = WORKGROUP
+
+[HOMEPI]
+path = /home/pi
+comment = No comment
+writeable=Yes
+create mask=0777
+directory mask=0777
+public=no
+
+Here is a short explanation of what the code above means:
+
+workgroup: This is the domain that the Samba server will be part of. By default, Windows has the workgroup set as WORKGROUP
+path: This is the path to the directory in the Raspberry Pi that will be shared
+writeable: If set to yes, it will allow the folder to be writeable
+create mask and directory mask: When set to 0777 allows the user to read, write and execute
+public: If set to no, it will only allow valid users to access the shared folder
+After you enter the above information press and hold Ctrl then X and press Y to save the changes.
+
+Right now, we only have the user Pi setup in the Raspberry Pi. We now need to add Pi as a Samba user. Enter the following command:
+
+sudo smbpasswd -a pi
+
+Last but not least, restart the Samba service using the following command:
+
+sudo service smbd restart
+
+
+
