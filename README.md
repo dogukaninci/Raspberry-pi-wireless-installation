@@ -13,13 +13,12 @@ ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1  
 
 network={  
-     ssid="Example"  
-     psk="password"  
+<ul>ssid="Example"</ul>  <ul>psk="password" </ul> 
+
 }  
 
 network={  
-     ssid="Example2"  
-     psk="password2"  
+<ul>ssid="Example2"</ul>  <ul>psk="password2" </ul> 
 }  
 # Find IP address (easy way)
 ping raspberrypi.local
