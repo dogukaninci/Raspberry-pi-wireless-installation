@@ -18,8 +18,8 @@ network={
 }  
 
 network={  
-<ul>ssid="Example2"</ul>  <ul>psk="password2" </ul> 
-}  
+<ul>ssid="Example2"</ul>  <ul>psk="password2" </ul>   
+}<br/>
 # Find IP address (easy way)
 ping raspberrypi.local
 
